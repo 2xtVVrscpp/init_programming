@@ -1,0 +1,17 @@
+version: '3.6'
+services:
+  java:
+    build: ./docker/java/
+#    ports:
+#      - 8080:8080
+    tty: true
+    volumes:
+      - ./src/java:/usr/src/java:cached
+
+  cpp:
+    build: ./docker/cpp/
+#    ports:
+#      - 8080:8080
+    tty: true
+    volumes:
+      - ./src/cpp:/usr/src/:cached
