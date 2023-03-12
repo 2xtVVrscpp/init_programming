@@ -6,7 +6,7 @@ services:
 #      - 8080:8080
     tty: true
     volumes:
-      - ./src/java:/usr/local/src/java:cached
+      - ./src/java:/usr/local/java/:cached
 
   cpp:
     build: ./docker/cpp/
@@ -14,12 +14,12 @@ services:
 #      - 8080:8080
     tty: true
     volumes:
-      - ./src/cpp:/usr/local/src/:cached
+      - ./src/cpp:/usr/local/cpp/:cached
 
   vbnet:
     build: ./docker/vbnet/
     volumes:
-      - ./src/vbnet:/usr/local/src:cached
+      - ./src/vbnet:/usr/local/vbnet/:cached
     tty: true
     ports:
-      - 8000:80
+     - 8000:80
